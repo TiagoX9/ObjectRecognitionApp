@@ -54,12 +54,13 @@ def predict():
     results = []
     for i in range(num_detections):
         if detections['detection_scores'][i] >= 0.5:
-            class_id = int(detections['detection_classes'][i])  # Convert to int
+            class_id = int(detections['detection_classes'][i]) # Convert to int
             category = label_map.get(class_id, 'unknown')  # Get category name or 'unknown' if not found
             box = detections['detection_boxes'][i]
             score = detections['detection_scores'][i]
             results.append({'box': box, 'category': category, 'score': score})
 
+    print('Final', results)
     return jsonify(results)
 
 
@@ -92,7 +93,7 @@ async def process_image(websocket, path):
                 box = detections['detection_boxes'][i]
                 score = detections['detection_scores'][i]
                 results.append({'box': box, 'category': category, 'score': score})
-
+        print('2', results)
         # Send the results back to the client
         await websocket.send(json.dumps(results))
 
