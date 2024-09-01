@@ -30,9 +30,6 @@ const App = () => {
         aspect: [4, 3],
         quality: 1,
       })
-
-      console.log("ImagePicker Result:", result)
-
       if (
         !result.canceled &&
         result.assets &&
