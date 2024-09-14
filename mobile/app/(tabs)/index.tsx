@@ -11,8 +11,6 @@ import {
   Alert,
 } from "react-native"
 import * as ImagePicker from "expo-image-picker"
-// import { RNCamera, RNCameraProps } from "react-native-camera"
-// import WebSocket from "react-native-websockets"
 import axios, { AxiosResponse } from "axios"
 
 const App = () => {
