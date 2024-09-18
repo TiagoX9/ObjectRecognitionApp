@@ -1,4 +1,6 @@
-/ssd_mobilenet_v2_coco
+!/ssd_mobilenet_v2_coco
+!/main.py
+!/label_map.py
 __pycache__/
 .Python
 build/
